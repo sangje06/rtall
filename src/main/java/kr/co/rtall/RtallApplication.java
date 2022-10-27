@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RtallApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RtallApplication.class, args);
+		SpringApplication.run(
+				RtallApplication.class, args
+				);
 	}
 
 }
