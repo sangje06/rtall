@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-@RequiredArgsConstructor 
+@RequiredArgsConstructor
 public class CustomQueryRepository extends QuerydslRepositorySupport {
 
 	public List<ObjectNode> executeQuety(String query) {
