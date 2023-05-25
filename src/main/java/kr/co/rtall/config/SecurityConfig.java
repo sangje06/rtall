@@ -92,6 +92,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //			.tokenValiditySeconds(3600)
 			.userDetailsService(userDetailsService)
 		;
+		
+		http
+			.sessionManagement()
+			.maximumSessions(1) // 최대 허용가능 세션 수, -1 무제한
+			.maxSessionsPreventsLogin(true) // 동시로그인 차단, false: 기존 세션 만료
+			// invalidSessionUrl // 세션이 유효하지 않을때 이동 할 페이지
+			.expiredUrl("/expired") // 세션이 만료된 경우 이동 할 페이지
+			;
 	}
 
 	
